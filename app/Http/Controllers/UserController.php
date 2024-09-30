@@ -63,4 +63,18 @@ class UserController extends Controller
     {
         //
     }
+
+    /**
+     * Search for users by name or email.
+     */
+    public function search(Request $request)
+    {
+        $query = $request->input('query');
+        $users = User::where('name', 'LIKE', "%{$query}%")
+                     ->orWhere('email', 'LIKE', "%{$query}%")
+                     ->paginate(10);
+
+        return view('users.index', compact('users'));
+    }
+
 }

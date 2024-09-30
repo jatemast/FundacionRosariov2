@@ -33,3 +33,4 @@ Route::middleware([
  
 
  Route::get('/users', [UserController::class, 'index'])->name('users.index');
+Route::get('/users/search', [UserController::class, 'search'])->name('users.search');

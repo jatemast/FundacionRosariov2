@@ -12,17 +12,15 @@
 <body class="bg-cover bg-center bg-no-repeat" style="background-image: url('{{ asset('fondoadmin/font-index.jpg') }}'); min-height: 100vh;">
 
     <div class="container mx-auto p-6">
-              <div class="flex items-center">
-
+        <div class="flex items-center">
+            <form action="{{ route('users.search') }}" method="GET" class="flex">
                 <input type="text" name="query" placeholder="Buscar usuarios..." class="w-64 p-2 border border-gray-400 rounded-l-lg">
                 <button type="submit" class="bg-green-500 hover:bg-green-600 text-white font-bold py-1 px-3 rounded-r-lg">
                     Buscar
                 </button>
-            </div>
-        </form>
-
-            </div>
-        </form>
+            </form>
+        </div>
+    </div>
          
         <h1 class="text-3xl font-bold text-center text-white -600 mb-8">Usuarios registrados del sistema</h1>
         
