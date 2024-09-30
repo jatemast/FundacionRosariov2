@@ -47,7 +47,7 @@
                     <td class="border px-4 py-2">{{ $user->email }}</td>
                     <td class="border px-4 py-2">#</td> <!-- Asegúrate de tener la relación 'role' definida en el modelo -->
                     <td class="border px-4 py-2">
-                        <a href="#" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">
+                        <a href="{{ route('users.edit', $user->id) }}" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">
                             Gestionar
                         </a>
                     </td>

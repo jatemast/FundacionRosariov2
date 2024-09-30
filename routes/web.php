@@ -28,9 +28,8 @@ Route::middleware([
     })->name('dashboard');
 });
 
-
-
- 
-
- Route::get('/users', [UserController::class, 'index'])->name('users.index');
+Route::get('/users', [UserController::class, 'index'])->name('users.index');
 Route::get('/users/search', [UserController::class, 'search'])->name('users.search');
+
+// Cambiar la ruta para editar un usuario
+Route::get('/users/{id}/edit', [UserController::class, 'edit'])->name('users.edit');
